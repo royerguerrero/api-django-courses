@@ -1,8 +1,12 @@
-version: '3'
+version: "3"
 
 services:
   db:
     image: postgres
+    environment:
+      - POSTGRES_DB=postmancourseplatzi
+      - POSTGRES_USER=postmancourseplatziuser
+      - POSTGRES_PASSWORD=dfjhaSDn634fhdbnfuyfjqAhd
   web:
     build: .
     command: tail -F anything
