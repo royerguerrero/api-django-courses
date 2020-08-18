@@ -25,7 +25,11 @@ SECRET_KEY = '12f+v*t*0u+r!!-+o*sq!z8=p9pbu6+gif_8kuvm%j!wj-_las'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -80,9 +84,9 @@ WSGI_APPLICATION = 'composeexample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postmancourseplatzi',
-        'USER': 'postmancourseplatziuser',
-        'PASSWORD': 'dfjhaSDn634fhdbnfuyfjqAhd',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
         'HOST': 'db',
         'PORT': 5432,
     }

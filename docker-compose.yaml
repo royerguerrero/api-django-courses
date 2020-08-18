@@ -4,12 +4,12 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_DB=postmancourseplatzi
-      - POSTGRES_USER=postmancourseplatziuser
-      - POSTGRES_PASSWORD=dfjhaSDn634fhdbnfuyfjqAhd
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    command: tail -F anything
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./project:/code
     ports:
